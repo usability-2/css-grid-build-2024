@@ -1,0 +1,15 @@
+@use 'colours' as *;
+// as * - will get rid of the namespacing
+
+html {
+    font-size: 100%;
+    // browser default size for scalability
+}
+
+body {
+    // increases the font size to 18px, which will give use a basegrid size of 27px
+    font-size: 1.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $off-black;
+    // variables need to be brought in with @use and namespaced
+}
