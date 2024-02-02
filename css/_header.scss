@@ -1,0 +1,34 @@
+header {
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 0 8px #ccc;
+    .inner-container {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    button {
+        padding: 0.75px;
+        background-color: #fff;
+        border: none;
+    }
+    nav {
+        flex: 0 0 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height linear 1s;
+        a {
+            display: block;
+            padding: 0.25rem;
+        }
+        li {
+            margin: 0.25rem 0;
+        }
+    }
+    .show {
+        max-height: 200px;
+    }
+}

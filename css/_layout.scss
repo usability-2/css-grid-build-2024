@@ -1,0 +1,56 @@
+@use 'colours' as *;
+@use 'breakpoints' as *;
+
+header,
+section {
+    margin-bottom: 50px;
+}
+
+.grid-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+@media screen and (min-width: $small) {
+    .grid-container {
+        grid-template-columns: repeat(12, 1fr);
+         .recent-posts {
+            grid-column: 1 / span 6;
+         }
+         .popular-posts {
+            grid-column: 7 / span 6;
+         }
+         footer {
+            grid-column: 1 / -1;
+         }
+    }
+}
+
+@media screen and (min-width: $med) {
+    .recent-posts {
+        grid-column: 1 / span 8;
+     }
+     .popular-posts {
+        grid-column: 9 / span 4;
+     }
+}
+
+article {
+    margin-bottom: 32px;
+}
+
+.popular-posts {
+    article {
+        border: 1px solid $grey;
+        border-radius: 5px;
+        div {
+            padding: 1.5rem 1.5rem 0 1.5rem;
+        }
+        img {
+            border-radius: 5px 0 0 5px;
+        }
+    }
+}
