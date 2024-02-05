@@ -1,5 +1,6 @@
 @use 'colours' as *;
 @use 'breakpoints' as *;
+@use 'mixins' as *;
 
 header,
 section {
@@ -7,35 +8,10 @@ section {
 }
 
 .grid-container {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    @include container;
     display: grid;
     gap: 1rem;
-}
-
-@media screen and (min-width: $small) {
-    .grid-container {
-        grid-template-columns: repeat(12, 1fr);
-         .recent-posts {
-            grid-column: 1 / span 6;
-         }
-         .popular-posts {
-            grid-column: 7 / span 6;
-         }
-         footer {
-            grid-column: 1 / -1;
-         }
-    }
-}
-
-@media screen and (min-width: $med) {
-    .recent-posts {
-        grid-column: 1 / span 8;
-     }
-     .popular-posts {
-        grid-column: 9 / span 4;
-     }
+    align-items: start;
 }
 
 article {
@@ -43,9 +19,14 @@ article {
 }
 
 .popular-posts {
+    h2 {
+        margin-bottom: 1rem;
+    }
     article {
         border: 1px solid $grey;
         border-radius: 5px;
+        display: flex;
+        gap: 1rem;
         div {
             padding: 1.5rem 1.5rem 0 1.5rem;
         }
@@ -54,3 +35,41 @@ article {
         }
     }
 }
+
+@media screen and (min-width: $small) {
+    .grid-container {
+        grid-template-columns: repeat(12, 1fr);
+         .recent-posts {
+            grid-column: 1 / span 6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            h2,
+            article:first-of-type {
+                grid-column: 1 / -1;
+            }
+         }
+         .popular-posts {
+            grid-column: 7 / span 6;
+            article {
+                display: block;
+            }
+         }
+         footer {
+            grid-column: 1 / -1;
+         }
+    }
+}
+
+@media screen and (min-width: $med) {
+    .grid-container {
+        .recent-posts {
+            grid-column: 1 / span 8;
+         }
+         .popular-posts {
+            grid-column: 9 / span 4;
+         }
+
+    }
+}
+
