@@ -18,6 +18,12 @@ article {
     margin-bottom: 32px;
 }
 
+.recent-posts {
+    img:first-of-type {
+        aspect-ratio: 625/417 auto;
+    }
+}
+
 .popular-posts {
     h2 {
         margin-bottom: 1rem;

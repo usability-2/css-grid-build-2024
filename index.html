@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A current online magazine blog for healthy eating habits and good mental health.">
     <title>Magazine</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
@@ -37,36 +38,42 @@
         <section class="recent-posts">
             <h2>Recent Posts</h2>
             <article>
-                <!-- to do: come back and resize the images -->
-                <img src="img/healthy-breakfast-pots.jpg" alt="A jar of oatmeal and some fruit.">
+                <img
+                    src="img/healthy-breakfast-pots.jpg"
+                    srcset="img/healthy-breakfast-pots-sm.webp 625w,
+                        img/healthy-breakfast-pots-lg.webp 1207w"
+                    sizes="(max-width: 950px) 100vw,
+                        (max-width: 1300px) 50vw,
+                        (max-width: 1900px) calc(2/3vw)"
+                    alt="A jar of oatmeal and some fruit.">
                 <h3>Sept 14, 2024</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptates reprehenderit pariatur,
                     ipsam est eum autem id tempore exercitationem tenetur dignissimos, hic, quas repellat explicabo
                     obcaecati atque cupiditate dolorum dolores.</p>
             </article>
             <article>
-                <img src="img/holding-coffee-in-bed.jpg" alt="A person with a cup of coffee in bed.">
+                <img src="img/holding-coffee-in-bed.webp" alt="A person with a cup of coffee in bed.">
                 <h3>August 31, 2024</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae odio fugit cumque sed impedit illo!
                     Accusamus enim ullam repudiandae iusto consectetur autem, minima maiores qui a quis ipsum corrupti
                     temporibus?</p>
             </article>
             <article>
-                <img src="img/legs-running-on-track.jpg" alt="Person running on a track.">
+                <img src="img/legs-running-on-track.webp" alt="Person running on a track.">
                 <h3>August 17th, 2024</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt accusantium vero iure, in quis nam
                     voluptatum maiores tenetur omnis minus, fugit, modi tempore. Corrupti commodi laboriosam repellendus
                     eius, quo soluta.</p>
             </article>
             <article>
-                <img src="img/writing-down-goals.jpg" alt="A person writting in a journal.">
+                <img src="img/writing-down-goals.webp" alt="A person writting in a journal.">
                 <h3>August 3, 2024</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam culpa, perferendis id, ut quam odio
                     possimus omnis recusandae obcaecati corrupti illum ea inventore tempore error cum odit sequi
                     reiciendis aut.</p>
             </article>
             <article>
-                <img src="img/healthy-salad.jpg" alt="A healthy garden salad.">
+                <img src="img/healthy-salad.webp" alt="A healthy garden salad.">
                 <h3>July 20, 2024</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam corporis ullam nisi quos rerum, ad
                     accusantium tempora. Vitae accusamus ipsum alias ea. At consequuntur illum accusamus alias maiores
